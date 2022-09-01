@@ -19,7 +19,7 @@ pipeline {
         stage('Pull') {
             steps {
                 echo 'Pulling image ...'
-                sh "docker pull ${IMAGE_NAME}:${IMAGE_TAG}" //Pull the image to scan
+                sh "docker pull ramki007/node-web-app:latest" //Pull the image to scan
             }
         }
         stage('Scan') {
