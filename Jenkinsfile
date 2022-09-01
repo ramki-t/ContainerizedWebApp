@@ -27,7 +27,7 @@ pipeline {
                 echo 'Scanning image ...'
                 sh "curl -L https://github.com/lacework/lacework-vulnerability-scanner/releases/latest/download/lw-scanner-linux-amd64 -o lw-scanner"
                 sh "chmod +x lw-scanner"
-                sh "./lw-scanner image evaluate ${IMAGE_NAME} ${IMAGE_TAG} --build-id ${BUILD_ID}"
+                sh "./lw-scanner image evaluate ramki007/node-web-app latest --build-id 23f8570c2ab6"
             }
         }
     }
