@@ -25,7 +25,7 @@ pipeline {
         stage('Scan') {
             steps {
                 echo 'Scanning image ...'
-                sh "curl -L https://github.com/lacework/lacework-vulnerability-scanner/releases/latest/download/lw-scanner-linux-amd64 -o lw-scanner"
+                sh "curl -L https://github.com/lacework/lacework-vulnerability-scanner/releases/latest/download/lw-scanner-darwin-amd64 -o lw-scanner"
                 sh "chmod +x lw-scanner"
                 sh "./lw-scanner image evaluate ramki007/node-web-app:latest"
             }
