@@ -9,6 +9,11 @@ pipeline {
     }
 
     stage('Scan') {
+      agent any
+      environment {
+        LW_ACCESS_TOKEN = '_b71597d2333e350118be296ab87aac2a'
+        LW_ACCOUNT_NAME = 'lw100'
+      }
       steps {
         echo 'Scanning image ...'
         sh 'curl -L https://github.com/lacework/lacework-vulnerability-scanner/releases/latest/download/lw-scanner-darwin-amd64 -o lw-scanner'
