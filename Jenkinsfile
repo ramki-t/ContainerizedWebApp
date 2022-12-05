@@ -23,10 +23,6 @@ pipeline {
     }
 
   }
-  environment {
-    LW_ACCESS_TOKEN = '_b71597d2333e350118be296ab87aac2a'
-    LW_ACCOUNT_NAME = 'lw100'
-  }
   parameters {
     string(name: 'IMAGE_NAME', description: 'Specify Image Name', defaultValue: '')
     string(name: 'IMAGE_TAG', description: 'Specify Image Tag', defaultValue: '')
